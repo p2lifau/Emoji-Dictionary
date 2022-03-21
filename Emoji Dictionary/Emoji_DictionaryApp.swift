@@ -11,7 +11,7 @@ import SwiftUI
 struct Emoji_DictionaryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmojiListView()
         }
     }
 }
