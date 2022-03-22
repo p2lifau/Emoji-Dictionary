@@ -12,12 +12,17 @@ struct EmojiDetailView: View {
     
     
     var body: some View {
-        Text(emoji.symbol).font(.system(size: 300))
+        VStack{
+            Text(emoji.symbol).font(.system(size: 300))
+            Text(emoji.definition)
+            Text(String(repeating: "⭐️", count: emoji.rating))
+                .font(.system(size: 50))
+        }
     }
 }
 
 struct EmojiDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojiDetailView(emoji: Emoji(id: UUID(), symbol: "🏎"))
+        EmojiDetailView(emoji: Emoji(id: UUID(), symbol: "🏎", definition: "Speed Racer", rating: 5))
     }
 }
